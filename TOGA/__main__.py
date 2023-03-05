@@ -60,71 +60,24 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 PM_START_TEXT = """
-*Heyaa.! {}, I'M Lucy ♡*
-*I'M An Group Management Bot, Built For Weebs.*
-• *Alive Since* - {}
-*Use /help To Go Through My Commands..*
+Heya there! My name is **Nightingale**.
+I can help manage your groups with useful features, 
+feel free to add me to your groups!
+
+*Type > /help to view list of commands!*
 """
 
 buttons = [
     [
                         InlineKeyboardButton(
-                             text="+Add Me",
+                             text="Wanna Me?",
                              url="https://t.me/Lucy_Probot?startgroup=true"),
-                        InlineKeyboardButton(
-                             text="Support",
-                             url="https://t.me/LucyBot_Support"),
-                    ],
-                  [
-                        InlineKeyboardButton(
-                             text="Help",
-                             callback_data="help_back"),
-                        InlineKeyboardButton(
-                             text="Updates",
-                             url="https://t.me/LucyBotUpdates"),
-                    ],
-                  [
-                        InlineKeyboardButton(
-                             text="Chit-Chat",
-                             url="https://t.me/AnimeChatNirvana"),
                     ],
     ]
 
-ABOUT1 = """
-*‣ Let's Make Your Group Well Managed Now*
-‣ *Admin Tools*:-
-Basic Admin tools help you to protect and powerup your group. You can ban members, Kick members, Promote someone as admin through commands of bot.
-‣ *Greetings*:-
-Lets set a welcome message to welcome new users coming to your group by sending /setwelcome [message] to set a welcome message.
-‣ *Anti-flood*:-\nUsers/Spammers flooding non-stop? send /setflood [number] And /setfloodmode [mute/ban/tmute] To Stop flooding From Spammers.
-‣ *Rules*:-\nDon't want to explain rules to each newbie? Setup rules by sending /setrules [message] to set a Rules.
-‣ *Reports*:-\nEnable reporting so that your users can report troublemakers to admins send /reports [on\off] to enable/disable reports.
-"""
-
-ABOUT2 = """
-*‣ Bot Support Chats*\nJoin My Support Group/Channel For Reporting Problems And Updates.
-"""
-
-ABOUT3 = """
-Hello [{}], My name is Lucy. A Powerful Telegram Group Management Bot built to help you manage Group easily.
-‣ I can Restrict Users.
-‣ I can Greet Users with customizable welcome message and even set a group rules
-‣ I have an advanced Anti-Flood System which will help you to safe group from Spammmer.
-‣ I can Warn Users until they reach max Warns, with each predefined actions such as Ban, Mute and Kick etc.
-‣ I have Note Keeping System, Blacklists, And even Predetermined replies on certain keywords.
-‣ I check Admins Permissions before perform any Command and more Stuffs.
-‣ I have an advanced Artificial Chatbot System, so can talk with users like humans.
-*If you have any Question, Please Visit Our Support Group
-"""
 
 HELP_STRINGS = """
-Heya, I'm HERE!
-Main commands available :
- ‣ /help <module name>: PM's you info about that module.
- ‣ /settings:
-   • in PM: will send you your settings for all supported modules.
-   • in a group: will redirect you to pm, with all that chat's settings.
-For all command use / or !
+**Main commands:** 
 """
 
 TOGA_PIC = ""
