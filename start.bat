@@ -1,4 +1,4 @@
 @echo off
-TITLE TOGA
-:: Enables virtual env mode and then starts TOGA
-env\scripts\activate.bat && py -m TOGA
+TITLE Aurora
+:: Enables virtual env mode and then starts Aurora
+env\scripts\activate.bat && py -m Aurora
