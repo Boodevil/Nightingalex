@@ -4,7 +4,7 @@ import base64
 import random
 from telethon.tl import types 
 from telethon.utils import get_display_name, get_peer_id
-from TOGA.utils.tools2 import async_searcher, check_filename, json_parser
+from Aurora.utils.tools2 import async_searcher, check_filename, json_parser
 from sqlalchemy import Boolean, Column 
 
 try:
