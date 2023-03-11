@@ -1,15 +1,15 @@
 {
-      "name": "TOGA",
-      "description": "An Advanced Anime Themed Telegram Group Management Bot.",
+      "name": "Aurora",
+      "description": "An Advanced Telegram Group Management Bot.",
       "logo": "",
       "keywords": [
          "telegram",
          "anime",
          "group",
          "manager",
-         "TOGA"
+         "Aurora"
       ],   
-   "repository": "https://github.com/KAC-CHAN/TOGA",
+   "repository": "https://github.com/Boodevil/Nightingalex",
    "addons": [
       {
          "options": {
