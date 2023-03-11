@@ -1,7 +1,7 @@
 import sys
 import traceback
 from functools import wraps
-from TOGA import pgram, SUPPORT_CHAT
+from Aurora import pgram, SUPPORT_CHAT
 from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 
 
