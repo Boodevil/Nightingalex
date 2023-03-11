@@ -12,7 +12,7 @@ from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from redis import StrictRedis
 from Python_ARQ import ARQ
 from pyrogram import Client, errors
-from TOGA.services.quoteapi import Quotly
+from Aurora.services.quoteapi import Quotly
 
 StartTime = time.time()
 
@@ -23,8 +23,8 @@ logging.basicConfig(
               logging.StreamHandler()],
     level=logging.INFO)
 
-LOGGER = logging.getLogger("[TOGA]")
-LOGGER.info("CREATED BY: UNKNOWN (t.me/XtheAnonymous)")
+LOGGER = logging.getLogger("[Aurora]")
+LOGGER.info("CREATED BY: UNKNOWN (t.me/Anonymousxbot)")
 
 log = logging.getLogger('[Your Bot Is DEPLOYING]')
 
@@ -127,7 +127,7 @@ if ENV:
             "Your blacklisted chats list does not contain valid integers.")
     
 else:
-    from TOGA.config import Development as Config
+    from Aurora.config import Development as Config
     TOKEN = Config.TOKEN
 
     try:
@@ -248,7 +248,7 @@ TIGERS = list(TIGERS)
 
 
 # Load at end to ensure all prev variables have been set
-from TOGA.modules.helper_funcs.handlers import (CustomCommandHandler,
+from Aurora.modules.helper_funcs.handlers import (CustomCommandHandler,
                                                         CustomMessageHandler,
                                                         CustomRegexHandler)
 
@@ -270,7 +270,7 @@ BOT_NAME = bottie.first_name
 BOT_MENTION = bottie.mention
 
 print(
-    "[TOGA] TOGA Is Starting."
+    "[Aurora] Aurora Is Starting."
 )
 
 REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=True)
@@ -279,7 +279,7 @@ try:
 
     REDIS.ping()
 
-    LOGGER.info("[TOGA]:Connecting To Redis Database")
+    LOGGER.info("[Aurora]:Connecting To Redis Database")
 
 except BaseException:
 
@@ -290,10 +290,10 @@ finally:
    REDIS.ping()
 
 print(
-    "[TOGA] SERVERS Connected SUCCESSFULLY!!"
+    "[Aurora] SERVERS Connected SUCCESSFULLY!!"
 )
 print(
-    "[TOGA] INITIALIZING MODULES ERROR!!"
+    "[Aurora] INITIALIZING MODULES ERROR!!"
 )
 
 quotly = Quotly()
