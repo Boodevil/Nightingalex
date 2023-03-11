@@ -12,16 +12,16 @@ from typing import List
 from typing import Optional
 from pyrogram import Client, idle, filters
 
-import TOGA.modules.sql.users_sql as sql
-from TOGA.modules.sudoers import bot_sys_stats as bss
+import Aurora.modules.sql.users_sql as sql
+from Aurora.modules.sudoers import bot_sys_stats as bss
 
-from TOGA import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
+from Aurora import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
                           OWNER_ID, PORT, SUPPORT_CHAT, TOKEN, URL, WEBHOOK, BOT_NAME,
                           SUPPORT_CHAT, dispatcher, StartTime, telethn, updater, pgram, pbot)
 
-from TOGA.modules import ALL_MODULES
-from TOGA.modules.helper_funcs.chat_status import is_user_admin
-from TOGA.modules.helper_funcs.misc import paginate_modules
+from Aurora.modules import ALL_MODULES
+from Aurora.modules.helper_funcs.chat_status import is_user_admin
+from Aurora.modules.helper_funcs.misc import paginate_modules
 from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
                       Update)
 from telegram.error import (BadRequest, ChatMigrated, NetworkError,
@@ -80,18 +80,18 @@ HELP_STRINGS = """
 **Main commands:** 
 """
 
-TOGA_PIC = ""
+AURORA_PIC = ""
 
-TOGA_N_IMG = (
+AURORA_N_IMG = (
   "",
   ""
 )
 
-TOGA_VID = ""
+AURORA_VID = ""
 
 PM_PHOTO = "https://telegra.ph/file/a98e8153d0c258011e562.jpg"
 
-TOGA_DISPACHER_PIC = ""
+AURORA_DISPACHER_PIC = ""
 
 DONATE_STRING = """No Need :)"""
 
@@ -106,7 +106,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES: 
-    imported_module = importlib.import_module("TOGA.modules." +
+    imported_module = importlib.import_module("Aurora.modules." +
                                               module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
@@ -235,10 +235,10 @@ def start(update: Update, context: CallbackContext):
                   [
                        InlineKeyboardButton(
                              text="Support",
-                             url="t.me/LucyBotSupport"),
+                             url="t.me/"),
                        InlineKeyboardButton(
                              text="Updates",
-                             url="t.me/LucyBotUpdates")
+                             url="t.me/")
                      ]
                 ]
             ),
@@ -367,11 +367,11 @@ def about_callback_data(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Support", url="t.me/lUCYbOTSupport"),
-                    InlineKeyboardButton(text="Updates", url="t.me/LucyBotUpdates"),
+                    InlineKeyboardButton(text="Support", url="t.me/"),
+                    InlineKeyboardButton(text="Updates", url="t.me/"),
                  ],
                  [
-                    InlineKeyboardButton(text="Back", callback_data="toga_")
+                    InlineKeyboardButton(text="Back", callback_data="aurora_")
                  ],
                 ]
             ),
@@ -390,7 +390,7 @@ def repo_callback_data(update, context):
                 [
                  [
                     InlineKeyboardButton(text="Source Code", url=""),
-                    InlineKeyboardButton(text="Developer", url="t.me/XTheAnonymous"),
+                    InlineKeyboardButton(text="Developer", url=""),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="sumi_")
@@ -410,7 +410,7 @@ def sumi_callback_data(update, context):
     query = update.callback_query
     bot = context.bot
     uptime = get_readable_time((time.time() - StartTime))
-    if query.data == "toga_":
+    if query.data == "aurora_":
         query.message.edit_caption(
             ABOUT3.format(update.effective_user.first_name, update.effective_user.id, escape_markdown(context.bot.first_name)),
             parse_mode=ParseMode.MARKDOWN,
@@ -425,12 +425,12 @@ def sumi_callback_data(update, context):
                     InlineKeyboardButton(text="Source Code", callback_data="repo_"),
                  ],
                  [
-                    InlineKeyboardButton(text="Back", callback_data="toga_back")
+                    InlineKeyboardButton(text="Back", callback_data="aurora_back")
                  ],
                 ]
             ),
         )
-    elif query.data == "toga_back":
+    elif query.data == "aurora_back":
         first_name = update.effective_user.full_name
         id = update.effective_user.id
         query.message.edit_caption(
@@ -468,7 +468,7 @@ def get_help(update: Update, context: CallbackContext):
         first_name = update.effective_user.full_name
         first_nam = update.effective_user.id
         update.effective_message.reply_photo(
-            random.choice(TOGA_N_IMG), caption= "Hey [{}](tg://user?id={}) Click the Button Below to get the list of possible commands.".format(first_name, first_nam),
+            random.choice(AURORA_N_IMG), caption= "Hey [{}](tg://user?id={}) Click the Button Below to get the list of possible commands.".format(first_name, first_nam),
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -724,7 +724,7 @@ def main():
         settings_button, pattern=r"stngs_")
 
     about_callback_handler = CallbackQueryHandler(about_callback_data, pattern=r"about_")
-    sumi_callback_handler = CallbackQueryHandler(sumi_callback_data, pattern=r"toga_")
+    sumi_callback_handler = CallbackQueryHandler(sumi_callback_data, pattern=r"aurora_")
     repo_callback_handler = CallbackQueryHandler(repo_callback_data, pattern=r"repo_")
     donate_handler = CommandHandler("donate", donate)
     migrate_handler = MessageHandler(Filters.status_update.migrate,
@@ -754,7 +754,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info("Toga Is Online")
+        LOGGER.info("Aurora Is Online")
         allowed_updates = ['message', 'edited_message', 'callback_query', 'callback_query', 'my_chat_member',
                            'chat_member', 'chat_join_request', 'channel_post', 'edited_channel_post', 'inline_query']
         updater.start_polling(
