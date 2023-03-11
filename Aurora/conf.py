@@ -1,5 +1,5 @@
 from envparse import env
-from TOGA import LOGGER
+from Aurora import LOGGER
 
 DEFAULTS = {
     "LOAD_MODULES": True,
