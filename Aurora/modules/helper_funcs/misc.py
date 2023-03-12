@@ -3,7 +3,7 @@ from  uuid  import  uuid4
 from math import ceil
 from typing import Dict, List
 
-from TOGA import NO_LOAD
+from Aurora import NO_LOAD
 from telegram import MAX_MESSAGE_LENGTH, Bot, InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, InlineQueryResultArticle, InputTextMessageContent
 from telegram.error import TelegramError
 
@@ -81,7 +81,7 @@ def paginate_modules(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
                 EqInlineKeyboardButton(
                     "≼", callback_data="{}_prev({})".format(prefix, modulo_page)
                 ),
-                EqInlineKeyboardButton("Home", callback_data="toga_back"),
+                EqInlineKeyboardButton("Home", callback_data="aurora_back"),
                 EqInlineKeyboardButton(
                     "≽", callback_data="{}_next({})".format(prefix, modulo_page)
                 ),
@@ -89,7 +89,7 @@ def paginate_modules(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
         ]
 
     else:
-        pairs += [[EqInlineKeyboardButton("Home", callback_data="toga_back")]]
+        pairs += [[EqInlineKeyboardButton("Home", callback_data="aurora_back")]]
 
     return pairs
 
