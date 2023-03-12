@@ -1,7 +1,7 @@
 from telegram import Message
 from telegram.ext import MessageFilter
 
-from TOGA import DEMONS, DRAGONS, DEV_USERS
+from Aurora import DEMONS, DRAGONS, DEV_USERS
 
 
 class CustomFilters(object):
