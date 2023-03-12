@@ -1,7 +1,7 @@
 from typing import List, Optional
 
-from TOGA import LOGGER
-from TOGA.modules.users import get_user_id
+from Aurora import LOGGER
+from Aurora.modules.users import get_user_id
 from telegram import Message, MessageEntity
 from telegram.error import BadRequest
 
