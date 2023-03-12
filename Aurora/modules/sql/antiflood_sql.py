@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import String, Column, Integer, BigInteger, UnicodeText
 
-from TOGA.modules.sql import SESSION, BASE
+from Aurora.modules.sql import SESSION, BASE
 
 DEF_COUNT = 1
 DEF_LIMIT = 0
