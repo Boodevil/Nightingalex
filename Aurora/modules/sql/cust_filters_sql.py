@@ -2,8 +2,8 @@ import threading
 
 from sqlalchemy import Column, String, UnicodeText, Boolean, Integer, distinct, func
 
-from TOGA.modules.helper_funcs.msg_types import Types
-from TOGA.modules.sql import BASE, SESSION
+from Aurora.modules.helper_funcs.msg_types import Types
+from Aurora.modules.sql import BASE, SESSION
 
 
 class CustomFilters(BASE):
