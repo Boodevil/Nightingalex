@@ -1,6 +1,6 @@
 import threading
 
-from TOGA.modules.sql import BASE, SESSION
+from Aurora.modules.sql import BASE, SESSION
 from sqlalchemy import Column, String, UnicodeText
 
 
