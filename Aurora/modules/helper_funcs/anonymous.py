@@ -6,8 +6,8 @@ from telegram.ext import CallbackContext
 from telegram.inline.inlinekeyboardbutton import InlineKeyboardButton
 from telegram.inline.inlinekeyboardmarkup import InlineKeyboardMarkup
 
-from TOGA import DEV_USERS, DRAGONS, dispatcher
-from TOGA.modules.helper_funcs.decorators import TOGAcallback
+from Aurora import DEV_USERS, DRAGONS, dispatcher
+from Aurora.modules.helper_funcs.decorators import TOGAcallback
 
 
 class AdminPerms(Enum):
@@ -61,7 +61,7 @@ def user_admin(permission: AdminPerms):
     return wrapper
 
 
-@TOGAcallback(pattern="anoncb")
+@Auroracallback(pattern="anoncb")
 def anon_callback_handler1(upd: Update, _: CallbackContext):
     callback = upd.callback_query
     perm = callback.data.split('/')[3]
