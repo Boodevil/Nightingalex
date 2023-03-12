@@ -4,7 +4,7 @@ from sqlalchemy import Boolean
 from sqlalchemy.sql.sqltypes import String
 from sqlalchemy import Column
 
-from TOGA.modules.sql import BASE, SESSION
+from Aurora.modules.sql import BASE, SESSION
 
 
 class AntiChannelSettings(BASE):
