@@ -1,6 +1,6 @@
-import TOGA.modules.sql.blacklistusers_sql as sql
-from TOGA import ALLOW_EXCL
-from TOGA import DEV_USERS, DRAGONS, DEMONS, TIGERS, WOLVES
+import Aurora.modules.sql.blacklistusers_sql as sql
+from Aurora import ALLOW_EXCL
+from Aurora import DEV_USERS, DRAGONS, DEMONS, TIGERS, WOLVES
 
 from telegram import Update
 from telegram.ext import CommandHandler, MessageHandler, RegexHandler, Filters
