@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import func, distinct, Column, String, UnicodeText, Integer
 
-from TOGA.modules.sql import SESSION, BASE
+from Aurora.modules.sql import SESSION, BASE
 
 
 class BlackListFilters(BASE):
