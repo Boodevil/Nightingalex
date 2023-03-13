@@ -1,6 +1,6 @@
-from TOGA.modules.helper_funcs.chat_status import user_admin
-from TOGA.modules.disable import DisableAbleCommandHandler
-from TOGA import dispatcher
+from Aurora.modules.helper_funcs.chat_status import user_admin
+from Aurora.modules.disable import DisableAbleCommandHandler
+from Aurora import dispatcher
 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram import ParseMode, Update
@@ -76,38 +76,6 @@ def markdown_help(update: Update, context: CallbackContext):
     markdown_help_sender(update)
 
 
-__help__ = """
-*Available commands:*
-*Urban Dictonary:*
- • /ud <word>*:* Type the word or expression you want to search use
-*Markdown:*
- • `/markdownhelp`*:* quick summary of how markdown works in telegram - can only be called in private chats
-*Logo:*
- • `/logo <text>`*:* creates a logo for you from the given texts
-*Paste:*
- • `/paste`*:* Saves replied content to `nekobin.com` and replies with a url
-*GitHub:*
- • `/github <username>`*:* Shows the GitHub info of the user
-*React:*
- • `/react`*:* Reacts with a random reaction 
-*Urban Dictonary:*
- • `/ud <word>`*:* Type the word or expression you want to search use
-*Wikipedia:*
- • `/wiki <query>`*:* wikipedia your query
-*Wallpapers:*
- • `/wall <query>`*:* get a wallpaper from wall.alphacoders.com
-*Currency converter:* 
- • `/cash`*:* currency converter
-Example:
- `/cash 1 USD INR`  
-      _OR_
- `/cash 1 usd inr`
-Output: `1.0 USD = 75.505 INR`
-*Time:*
- • `/time <query>`*:* Gives information about a timezone.
-  *Available queries:* Country Code/Country Name/Timezone Name
-   • 🕐 [Timezones list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
-"""
 
 ECHO_HANDLER = DisableAbleCommandHandler("echo", echo, filters=Filters.group)
 MD_HELP_HANDLER = CommandHandler("markdownhelp", markdown_help)
@@ -115,7 +83,6 @@ MD_HELP_HANDLER = CommandHandler("markdownhelp", markdown_help)
 dispatcher.add_handler(ECHO_HANDLER)
 dispatcher.add_handler(MD_HELP_HANDLER)
 
-__mod_name__ = "Extra"
 __command_list__ = ["id", "echo"]
 __handlers__ = [
     ECHO_HANDLER,
