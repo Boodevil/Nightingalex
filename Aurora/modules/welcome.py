@@ -1014,20 +1014,11 @@ def __chat_settings__(chat_id, user_id):
 HELPABLE = {}
 
 HELP_STRINGS = """
-Hey [{}](tg://user?id={}) your *TOGA* is here! 
-I Help Admins To Manage Their Groups! 
-Main commands available :
- • /help: PM's you this message.
- • /privacy: to view the privacy policy, and interact with your data.
- • /help <module name>: PM's you info about that module.
- • /settings:
-   • in PM: will send you your settings for all supported modules.
-   • in a group: will redirect you to pm, with all that chat's settings.
-For all command use / or !
+Main commands
 """
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("TOGA.modules." +
+    imported_module = importlib.import_module("Aurora.modules." +
                                               module_name)
     if hasattr(imported_module, "__help__") and imported_module.__help__:
         HELPABLE[imported_module.__mod_name__.lower()] = imported_module
