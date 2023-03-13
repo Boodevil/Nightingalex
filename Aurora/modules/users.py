@@ -12,11 +12,11 @@ from telegram.ext import (
     CommandHandler,
 )
 
-import TOGA.modules.sql.users_sql as sql
-from TOGA.modules.disable import DisableAbleCommandHandler
-from TOGA import DEV_USERS, LOGGER, OWNER_ID, dispatcher
-from TOGA.modules.helper_funcs.chat_status import dev_plus, sudo_plus
-from TOGA.modules.sql.users_sql import get_all_users
+import Aurora.modules.sql.users_sql as sql
+from Aurora.modules.disable import DisableAbleCommandHandler
+from Aurora import DEV_USERS, LOGGER, OWNER_ID, dispatcher
+from Aurora.modules.helper_funcs.chat_status import dev_plus, sudo_plus
+from Aurora.modules.sql.users_sql import get_all_users
 
 
 USERS_GROUP = 4
