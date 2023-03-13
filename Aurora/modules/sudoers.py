@@ -7,9 +7,9 @@ import time
 import psutil
 from pyrogram import filters
 
-from TOGA import (StartTime, DEV_USERS, BOT_NAME, pgram)
-import TOGA.utils.formatter as formatter
-import TOGA.modules.sql.users_sql as sql
+from Aurora import (StartTime, DEV_USERS, BOT_NAME, pgram)
+import Aurora.utils.formatter as formatter
+import Aurora.modules.sql.users_sql as sql
 
 
 
