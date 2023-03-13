@@ -4,7 +4,7 @@ import traceback
 from sqlalchemy.sql.sqltypes import BigInteger
 from sqlalchemy import Column, String
 from sqlalchemy.dialects import postgresql
-from TOGA.modules.sql import BASE, SESSION
+from Aurora.modules.sql import BASE, SESSION
 
 class Royals(BASE):
 
