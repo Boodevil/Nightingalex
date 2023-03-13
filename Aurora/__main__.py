@@ -227,18 +227,12 @@ def start(update: Update, context: CallbackContext):
         first = update.effective_user.full_name
         chat = update.effective_chat.title
         update.effective_message.reply_video(
-                video= "https://telegra.ph/file/c29e65a130ef235866652.mp4",
-                caption="Started!‎‎‎‎‎‎‎‎ㅤ",
+                video= "",
+                caption="Nobody gonna to help you🤧ㅤ",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                       InlineKeyboardButton(
-                             text="Support",
-                             url="t.me/"),
-                       InlineKeyboardButton(
-                             text="Updates",
-                             url="t.me/")
                      ]
                 ]
             ),
