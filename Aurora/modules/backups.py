@@ -5,17 +5,17 @@ from telegram import ParseMode, Message
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async
 
-import TOGA.modules.sql.notes_sql as sql
-from TOGA import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER
-from TOGA.__main__ import DATA_IMPORT
-from TOGA.modules.helper_funcs.chat_status import user_admin
-from TOGA.modules.helper_funcs.alternate import typing_action
+import Aurora.modules.sql.notes_sql as sql
+from Aurora import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER
+from Aurora.__main__ import DATA_IMPORT
+from Aurora.modules.helper_funcs.chat_status import user_admin
+from Aurora.modules.helper_funcs.alternate import typing_action
 
-import TOGA.modules.sql.rules_sql as rulessql
-import TOGA.modules.sql.blacklist_sql as blacklistsql
-from TOGA.modules.sql import disable_sql as disabledsql
-import TOGA.modules.sql.locks_sql as locksql
-from TOGA.modules.connection import connected
+import Aurora.modules.sql.rules_sql as rulessql
+import Aurora.modules.sql.blacklist_sql as blacklistsql
+from Aurora.modules.sql import disable_sql as disabledsql
+import Aurora.modules.sql.locks_sql as locksql
+from Aurora.modules.connection import connected
 
 
 @run_async
