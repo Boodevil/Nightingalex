@@ -4,15 +4,15 @@ import re
 
 from telegram import Message, Chat, Update, User, ChatPermissions
 
-from TOGA import TIGERS, WOLVES, dispatcher
-from TOGA.modules.helper_funcs.chat_status import (
+from Aurora import TIGERS, WOLVES, dispatcher
+from Aurora.modules.helper_funcs.chat_status import (
     bot_admin,
     is_user_admin,
     user_admin,
     user_admin_no_reply,
 )
-from TOGA.modules.log_channel import loggable
-from TOGA.modules.sql import antiflood_sql as sql
+from Aurora.modules.log_channel import loggable
+from Aurora.modules.sql import antiflood_sql as sql
 from telegram.error import BadRequest
 from telegram.ext import (
     CallbackContext,
@@ -23,10 +23,10 @@ from telegram.ext import (
     run_async,
 )
 from telegram.utils.helpers import mention_html, escape_markdown
-from TOGA.modules.helper_funcs.string_handling import extract_time
-from TOGA.modules.connection import connected
-from TOGA.modules.helper_funcs.alternate import send_message
-from TOGA.modules.sql.approve_sql import is_approved
+from Aurora.modules.helper_funcs.string_handling import extract_time
+from Aurora.modules.connection import connected
+from Aurora.modules.helper_funcs.alternate import send_message
+from Aurora.modules.sql.approve_sql import is_approved
 
 FLOOD_GROUP = 3
 
