@@ -1,18 +1,18 @@
 import html
 from typing import Optional
 
-import TOGA.modules.sql.blsticker_sql as sql
-from TOGA import LOGGER, dispatcher
-from TOGA.modules.connection import connected
-from TOGA.modules.disable import DisableAbleCommandHandler
-from TOGA.modules.helper_funcs.alternate import send_message
-from TOGA.modules.helper_funcs.chat_status import (user_admin,
+import Aurora.modules.sql.blsticker_sql as sql
+from Aurora import LOGGER, dispatcher
+from Aurora.modules.connection import connected
+from Aurora.modules.disable import DisableAbleCommandHandler
+from Aurora.modules.helper_funcs.alternate import send_message
+from Aurora.modules.helper_funcs.chat_status import (user_admin,
                                                            user_not_admin)
-from TOGA.modules.helper_funcs.misc import split_message
-from TOGA.modules.helper_funcs.string_handling import extract_time
+from Aurora.modules.helper_funcs.misc import split_message
+from Aurora.modules.helper_funcs.string_handling import extract_time
 
-from TOGA.modules.log_channel import loggable
-from TOGA.modules.warns import warn
+from Aurora.modules.log_channel import loggable
+from Aurora.modules.warns import warn
 from telegram import (Chat, Message, ParseMode, Update, User, ChatPermissions)
 from telegram.error import BadRequest
 from telegram.ext import (CallbackContext, CommandHandler, Filters,
