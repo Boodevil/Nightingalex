@@ -71,7 +71,7 @@ buttons = [
     [
                         InlineKeyboardButton(
                              text="Wanna Me?",
-                             url="https://t.me/Lucy_Probot?startgroup=true"),
+                             url="https://t.me/NightangleXRobot?startgroup=true"),
                     ],
     ]
 
@@ -224,19 +224,10 @@ def start(update: Update, context: CallbackContext):
             )
 
     else:
-        first = update.effective_user.full_name
-        chat = update.effective_chat.title
-        update.effective_message.reply_video(
-                video= "",
-                caption="Nobody gonna to help you🤧ㅤ",
-            parse_mode=ParseMode.HTML,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                  [
-                     ]
-                ]
-            ),
-        )
+        update.effective_message.reply_text(
+            f"Nobody gonna to help you🤧",
+            parse_mode=ParseMode.HTML
+       )
 
 # for test purposes
 def error_callback(update: Update, context: CallbackContext):
@@ -301,8 +292,8 @@ def help_button(update, context):
                 text,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="⬅ Bᴀᴄᴋ", callback_data="help_back"),
-                      InlineKeyboardButton(text="⬅ Hᴏᴍᴇ", callback_data="toga_back")]]
+                    [[InlineKeyboardButton(text="Back", callback_data="help_back"),
+                      InlineKeyboardButton(text="Home", callback_data="aurora_back")]]
                 ),
             )
 
@@ -347,7 +338,7 @@ def about_callback_data(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Back", callback_data="sumi_")
+                    InlineKeyboardButton(text="Back", callback_data="auro_")
                  ],
                 ]
             ),
@@ -387,7 +378,7 @@ def repo_callback_data(update, context):
                     InlineKeyboardButton(text="Developer", url=""),
                  ],
                  [
-                    InlineKeyboardButton(text="Back", callback_data="sumi_")
+                    InlineKeyboardButton(text="Back", callback_data="auro_")
                  ],
                 ]
             ),
@@ -412,7 +403,7 @@ def sumi_callback_data(update, context):
                 [
                  [
                     InlineKeyboardButton(text="Guide", callback_data="about_"),
-                    InlineKeyboardButton(text="Developer", url="t.me/XTheAnonymous"),
+                    InlineKeyboardButton(text="Developer", url="t.me/Telegram.org"),
                  ],
                  [
                     InlineKeyboardButton(text="Support", callback_data="about_"),
@@ -467,7 +458,7 @@ def get_help(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                  InlineKeyboardButton(text=" Click here", url="https://t.me/Lucy_ProBot?start=help")
+                  InlineKeyboardButton(text=" Click here", url="https://t.me/NightangleXRobot?start=help")
                   ]
                 ]
             ),
@@ -694,7 +685,7 @@ def main():
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
             name = dispatcher.bot.first_name
-            m = dispatcher.bot.send_photo(f"@{SUPPORT_CHAT}", AURORA_DISPACHER_PIC, caption=f"I'm Online Again", parse_mode=ParseMode.MARKDOWN,
+            m = dispatcher.bot.send_photo(f"@{SUPPORT_CHAT}", AURORA_DISPACHER_PIC, caption=f"Nobody gonna to help you🤧", parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                 ]
