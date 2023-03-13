@@ -4,14 +4,14 @@ from telegram import Update
 from telegram.ext import CallbackContext
 from telegram.utils.helpers import mention_html
 
-from TOGA.modules.log_channel import loggable
-from TOGA.modules.helper_funcs.decorators import TOGAcmd
+from Aurora.modules.log_channel import loggable
+from Aurora.modules.helper_funcs.decorators import TOGAcmd
 
-import TOGA.modules.sql.logger_sql as sql
-from TOGA.modules.helper_funcs.anonymous import user_admin as u_admin, AdminPerms
+import Aurora.modules.sql.logger_sql as sql
+from Aurora.modules.helper_funcs.anonymous import user_admin as u_admin, AdminPerms
 
 
-@TOGAcmd(command="announce", pass_args=True)
+@Auroracmd(command="announce", pass_args=True)
 @u_admin(AdminPerms.CAN_CHANGE_INFO)
 @loggable
 def announcestat(update: Update, context: CallbackContext) -> str:
