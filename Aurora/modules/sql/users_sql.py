@@ -1,7 +1,7 @@
 import threading
 
-from TOGA import dispatcher
-from TOGA.modules.sql import BASE, SESSION
+from Aurora import dispatcher
+from Aurora.modules.sql import BASE, SESSION
 from sqlalchemy import (
     Column,
     ForeignKey,
