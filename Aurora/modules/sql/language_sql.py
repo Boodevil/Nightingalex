@@ -1,7 +1,7 @@
 import threading
 
 from sqlalchemy import Column, String, UnicodeText
-from TOGA.modules.sql import SESSION, BASE
+from Aurora.modules.sql import SESSION, BASE
 
 
 class ChatLangs(BASE):
