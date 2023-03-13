@@ -3,7 +3,7 @@ import typing
 
 from sqlalchemy import Column, String, func, distinct, BigInteger, Boolean, select
 
-from TOGA.modules.sql import BASE, SESSION
+from Aurora.modules.sql import BASE, SESSION
 
 
 class GroupLogs(BASE):
