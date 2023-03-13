@@ -4,10 +4,10 @@ from collections.abc import Iterable
 from telegram.ext import CommandHandler, CallbackQueryHandler
 from telegram import Update, InlineKeyboardMarkup, InlineKeyboardButton
 
-from TOGA import dispatcher
-import TOGA.modules.sql.language_sql as sql
-from TOGA.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
-from TOGA.langs import get_string, get_languages, get_language
+from Aurora import dispatcher
+import Aurora.modules.sql.language_sql as sql
+from Aurora.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
+from Aurora.langs import get_string, get_languages, get_language
 
 
 
