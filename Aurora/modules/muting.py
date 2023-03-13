@@ -4,17 +4,17 @@ import html
 import re
 from typing import Optional
 
-from TOGA import LOGGER, TIGERS, dispatcher
-from TOGA.modules.helper_funcs.chat_status import (bot_admin,
+from Aurora import LOGGER, TIGERS, dispatcher
+from Aurora.modules.helper_funcs.chat_status import (bot_admin,
                                                           user_admin_no_reply,
                                                            can_restrict,
                                                            connection_status,
                                                            is_user_admin,
                                                            user_admin)
-from TOGA.modules.helper_funcs.extraction import (extract_user,
+from Aurora.modules.helper_funcs.extraction import (extract_user,
                                                           extract_user_and_text)
-from TOGA.modules.helper_funcs.string_handling import extract_time
-from TOGA.modules.log_channel import loggable
+from Aurora.modules.helper_funcs.string_handling import extract_time
+from Aurora.modules.log_channel import loggable
 
 from telegram import (
     Bot, 
