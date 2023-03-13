@@ -22,7 +22,7 @@ from telegram.ext.dispatcher import run_async
 from telegram.error import BadRequest
 from telegram.utils.helpers import escape_markdown, mention_html
     
-from TOGA import (
+from Aurora import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
@@ -36,18 +36,18 @@ from TOGA import (
     SUPPORT_CHAT,
     UPDATE_CHANNEL,
 )
-from TOGA.__main__ import STATS, TOKEN, USER_INFO
-from TOGA.modules.sql import SESSION
-import TOGA.modules.sql.userinfo_sql as sql
-from TOGA.modules.disable import DisableAbleCommandHandler
-from TOGA.modules.sql.global_bans_sql import is_user_gbanned
-from TOGA.modules.redis.afk_redis import is_user_afk, afk_reason
-from TOGA.modules.sql.users_sql import get_user_num_chats
-from TOGA.modules.helper_funcs.chat_status import sudo_plus
-from TOGA.modules.helper_funcs.extraction import extract_user
-from TOGA import telethn
+from Aurora.__main__ import STATS, TOKEN, USER_INFO
+from Aurora.modules.sql import SESSION
+import Aurora.modules.sql.userinfo_sql as sql
+from Aurora.modules.disable import DisableAbleCommandHandler
+from Aurora.modules.sql.global_bans_sql import is_user_gbanned
+from Aurora.modules.redis.afk_redis import is_user_afk, afk_reason
+from Aurora.modules.sql.users_sql import get_user_num_chats
+from Aurora.modules.helper_funcs.chat_status import sudo_plus
+from Aurora.modules.helper_funcs.extraction import extract_user
+from Aurora import telethn
 
-TOGA_STATS_PIC = "hhttps://telegra.ph/file/11f8bed25e4192765e8de.jpg"
+AURORA_STATS_PIC = "hhttps://telegra.ph/file/11f8bed25e4192765e8de.jpg"
 
 def no_by_per(totalhp, percentage):
     """
