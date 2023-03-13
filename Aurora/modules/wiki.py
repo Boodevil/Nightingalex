@@ -1,6 +1,6 @@
 import wikipedia
-from TOGA import dispatcher
-from TOGA.modules.disable import DisableAbleCommandHandler
+from Aurora import dispatcher
+from Aurora.modules.disable import DisableAbleCommandHandler
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, run_async
 from wikipedia.exceptions import DisambiguationError, PageError
