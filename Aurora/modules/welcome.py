@@ -8,21 +8,21 @@ import importlib
 from functools import partial
 from pyrogram import Client , filters
 from pyrogram.types import Message
-import TOGA.modules.sql.welcome_sql as sql
-from TOGA import (DEV_USERS, LOGGER, OWNER_ID, DRAGONS, DEMONS, TIGERS, BOT_USERNAME,
+import Aurora.modules.sql.welcome_sql as sql
+from Aurora import (DEV_USERS, LOGGER, OWNER_ID, DRAGONS, DEMONS, TIGERS, BOT_USERNAME,
                           WOLVES, sw, dispatcher, EVENT_LOGS, JOIN_LOGGER, pgram)
-from TOGA.modules.helper_funcs.chat_status import (
+from Aurora.modules.helper_funcs.chat_status import (
     is_user_ban_protected,
     user_admin,
 )
-from TOGA.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from TOGA.modules.helper_funcs.msg_types import get_welcome_type
-from TOGA.modules.helper_funcs.string_handling import (
+from Aurora.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from Aurora.modules.helper_funcs.msg_types import get_welcome_type
+from Aurora.modules.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
     markdown_parser,
 )
-from TOGA.modules.log_channel import loggable
-from TOGA.modules.sql.global_bans_sql import is_user_gbanned
+from Aurora.modules.log_channel import loggable
+from Aurora.modules.sql.global_bans_sql import is_user_gbanned
 from telegram import (
     ChatPermissions,
     InlineKeyboardButton,
@@ -40,8 +40,8 @@ from telegram.ext import (
     run_async,
 )
 from telegram.utils.helpers import escape_markdown, mention_html, mention_markdown
-from TOGA.modules.helper_funcs.misc import paginate_modules
-from TOGA.modules import ALL_MODULES
+from Aurora.modules.helper_funcs.misc import paginate_modules
+from Aurora.modules import ALL_MODULES
 
 VALID_WELCOME_FORMATTERS = [
     "first",
