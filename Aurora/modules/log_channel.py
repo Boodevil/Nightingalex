@@ -2,9 +2,9 @@ from datetime import datetime
 from functools import wraps
 
 from telegram.ext import CallbackContext
-from TOGA.modules.helper_funcs.decorators import TOGAcmd, TOGAcallback
-from TOGA.modules.helper_funcs.misc import is_module_loaded
-from TOGA.modules.language import gs
+from Aurora.modules.helper_funcs.decorators import TOGAcmd, TOGAcallback
+from Aurora.modules.helper_funcs.misc import is_module_loaded
+from Aurora.modules.language import gs
 
 from ..modules.helper_funcs.anonymous import user_admin, AdminPerms
 
@@ -20,9 +20,9 @@ if is_module_loaded(FILENAME):
     from telegram.error import BadRequest, Unauthorized
     from telegram.utils.helpers import escape_markdown
 
-    from TOGA import EVENT_LOGS as GBAN_LOGS, LOGGER as log, dispatcher
-    from TOGA.modules.helper_funcs.chat_status import user_admin as u_admin, is_user_admin
-    from TOGA.modules.sql import log_channel_sql as sql
+    from Aurora import EVENT_LOGS as GBAN_LOGS, LOGGER as log, dispatcher
+    from Aurora.modules.helper_funcs.chat_status import user_admin as u_admin, is_user_admin
+    from Aurora.modules.sql import log_channel_sql as sql
 
 
     def loggable(func):
@@ -106,7 +106,7 @@ if is_module_loaded(FILENAME):
                 )
 
 
-    @TOGAcmd(command='logchannel')
+    @Auroracmd(command='logchannel')
     @u_admin
     def logging(update: Update, context: CallbackContext):
         bot = context.bot
@@ -126,7 +126,7 @@ if is_module_loaded(FILENAME):
             message.reply_text("No log channel has been set for this group!")
 
 
-    @TOGAcmd(command='setlog')
+    @Auroracmd(command='setlog')
     @user_admin(AdminPerms.CAN_CHANGE_INFO)
     def setlog(update: Update, context: CallbackContext):
         bot = context.bot
@@ -169,7 +169,7 @@ if is_module_loaded(FILENAME):
             )
 
 
-    @TOGAcmd(command='unsetlog')
+    @Auroracmd(command='unsetlog')
     @user_admin(AdminPerms.CAN_CHANGE_INFO)
     def unsetlog(update: Update, context: CallbackContext):
         bot = context.bot
@@ -227,7 +227,7 @@ else:
         return func
 
 
-@TOGAcmd("logsettings")
+@Auroracmd("logsettings")
 @user_admin(AdminPerms.CAN_CHANGE_INFO)
 def log_settings(update: Update, _: CallbackContext):
     chat = update.effective_chat
@@ -253,10 +253,10 @@ def log_settings(update: Update, _: CallbackContext):
     msg.reply_text("Toggle channel log settings", reply_markup=btn)
 
 
-from TOGA.modules.sql import log_channel_sql as sql
+from Aurora.modules.sql import log_channel_sql as sql
 
 
-@TOGAcallback(pattern=r"log_tog_.*")
+@Auroracallback(pattern=r"log_tog_.*")
 def log_setting_callback(update: Update, context: CallbackContext):
     cb = update.callback_query
     user = cb.from_user
