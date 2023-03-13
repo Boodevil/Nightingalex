@@ -1,7 +1,7 @@
 import ast
 import threading
-from TOGA import dispatcher
-from TOGA.modules.sql import BASE, SESSION
+from Aurora import dispatcher
+from Aurora.modules.sql import BASE, SESSION
 from sqlalchemy import Boolean, Column, String, UnicodeText, Integer, BigInteger
 from telegram.error import BadRequest, Unauthorized
 
