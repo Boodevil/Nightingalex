@@ -1,5 +1,5 @@
 from sqlalchemy import Column, String, Numeric, Boolean
-from TOGA.modules.sql import BASE, SESSION
+from Aurora.modules.sql import BASE, SESSION
 
 
 class forceSubscribe(BASE):
