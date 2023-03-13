@@ -5,7 +5,7 @@ from telegram.ext import CallbackContext
 from telegram.utils.helpers import mention_html
 
 from Aurora.modules.log_channel import loggable
-from Aurora.modules.helper_funcs.decorators import TOGAcmd
+from Aurora.modules.helper_funcs.decorators import Auroracmd
 
 import Aurora.modules.sql.logger_sql as sql
 from Aurora.modules.helper_funcs.anonymous import user_admin as u_admin, AdminPerms
