@@ -13,23 +13,23 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import escape_markdown, mention_html
 
-from TOGA import DRAGONS, LOGGER, dispatcher
-from TOGA.modules.connection import connected
-from TOGA.modules.disable import DisableAbleCommandHandler
-from TOGA.modules.helper_funcs.alternate import send_message, typing_action
-from TOGA.modules.helper_funcs.chat_status import user_admin
-from TOGA.modules.helper_funcs.extraction import extract_text
-from TOGA.modules.helper_funcs.filters import CustomFilters
-from TOGA.modules.helper_funcs.handlers import MessageHandlerChecker
-from TOGA.modules.helper_funcs.misc import build_keyboard_parser
-from TOGA.modules.helper_funcs.msg_types import get_filter_type
-from TOGA.modules.helper_funcs.string_handling import (
+from Aurora import DRAGONS, LOGGER, dispatcher
+from Aurora.modules.connection import connected
+from Aurora.modules.disable import DisableAbleCommandHandler
+from Aurora.modules.helper_funcs.alternate import send_message, typing_action
+from Aurora.modules.helper_funcs.chat_status import user_admin
+from Aurora.modules.helper_funcs.extraction import extract_text
+from Aurora.modules.helper_funcs.filters import CustomFilters
+from Aurora.modules.helper_funcs.handlers import MessageHandlerChecker
+from Aurora.modules.helper_funcs.misc import build_keyboard_parser
+from Aurora.modules.helper_funcs.msg_types import get_filter_type
+from Aurora.modules.helper_funcs.string_handling import (
     button_markdown_parser,
     escape_invalid_curly_brackets,
     markdown_to_html,
     split_quotes,
 )
-from TOGA.modules.sql import cust_filters_sql as sql
+from Aurora.modules.sql import cust_filters_sql as sql
 
 HANDLER_GROUP = 10
 
