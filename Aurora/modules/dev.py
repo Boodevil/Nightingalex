@@ -3,8 +3,8 @@ import subprocess
 import sys
 from time import sleep
 
-from TOGA import dispatcher
-from TOGA.modules.helper_funcs.chat_status import dev_plus
+from Aurora import dispatcher
+from Aurora.modules.helper_funcs.chat_status import dev_plus
 from telegram import TelegramError, Update
 from telegram.ext import CallbackContext, CommandHandler, run_async
 
