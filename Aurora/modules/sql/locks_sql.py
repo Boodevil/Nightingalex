@@ -3,7 +3,7 @@ import threading
 
 from sqlalchemy import Column, String, Boolean
 
-from TOGA.modules.sql import SESSION, BASE
+from Aurora.modules.sql import SESSION, BASE
 
 
 class Permissions(BASE):
