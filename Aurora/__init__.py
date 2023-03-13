@@ -76,6 +76,7 @@ if ENV:
     INFOPIC = bool(os.environ.get("INFOPIC", True))
     EVENT_LOGS = os.environ.get("EVENT_LOGS", "-1001561390075")
     WEBHOOK = bool(os.environ.get("WEBHOOK", False))
+    SYS_ADMIN = int(os.environ.get('SYS_ADMIN', 0)) 
     URL = os.environ.get('URL', "")  # Does not contain token
     PORT = int(os.environ.get('PORT', 5000))
     CERT_PATH = os.environ.get("CERT_PATH")
@@ -170,6 +171,7 @@ else:
     CERT_PATH = Config.CERT_PATH
     API_ID = Config.API_ID
     API_HASH = Config.API_HASH
+    SYS_ADMIN = Config.SYS_ADMIN
 
     DB_URI = Config.SQLALCHEMY_DATABASE_URI
     DONATION_LINK = Config.DONATION_LINK
