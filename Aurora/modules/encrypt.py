@@ -3,8 +3,8 @@
 import os
 import secureme
 
-from TOGA import telethn
-from TOGA.events import register
+from Aurora import telethn
+from Aurora.events import register
 
 @register(pattern="^/encrypt ?(.*)")
 async def hmm(event):
