@@ -1,11 +1,11 @@
 import html
-from TOGA.modules.disable import DisableAbleCommandHandler
-from TOGA import dispatcher, DRAGONS
-from TOGA.modules.helper_funcs.extraction import extract_user
+from Aurora.modules.disable import DisableAbleCommandHandler
+from Aurora import dispatcher, DRAGONS
+from Aurora.modules.helper_funcs.extraction import extract_user
 from telegram.ext import CallbackContext, run_async, CallbackQueryHandler
-import TOGA.modules.sql.approve_sql as sql
-from TOGA.modules.helper_funcs.chat_status import user_admin
-from TOGA.modules.log_channel import loggable
+import Aurora.modules.sql.approve_sql as sql
+from Aurora.modules.helper_funcs.chat_status import user_admin
+from Aurora.modules.log_channel import loggable
 from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton, Update
 from telegram.utils.helpers import mention_html
 from telegram.error import BadRequest
