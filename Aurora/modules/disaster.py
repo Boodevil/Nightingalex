@@ -635,6 +635,6 @@ Group admins/group owners do not need these commands.
  *Owner only*
   • /send*:* <module name>*:* Send module
   • /install*:* <reply to a .py>*:* Install module
-Visit @suppporttxd for more information. """
+Visit @telegram.org for more information. """
 
-__mod_name__ = "SuperUser"
+__mod_name__ = ""
