@@ -2,7 +2,7 @@ from datetime import datetime
 from functools import wraps
 
 from telegram.ext import CallbackContext
-from Aurora.modules.helper_funcs.decorators import TOGAcmd, TOGAcallback
+from Aurora.modules.helper_funcs.decorators import Auroracmd, Auroracallback
 from Aurora.modules.helper_funcs.misc import is_module_loaded
 from Aurora.modules.language import gs
 
