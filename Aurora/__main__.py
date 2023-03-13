@@ -89,7 +89,7 @@ AURORA_N_IMG = (
 
 AURORA_VID = ""
 
-PM_PHOTO = "https://telegra.ph/file/a98e8153d0c258011e562.jpg"
+PM_PHOTO = "https://telegra.ph/file/63f03bd63fa47c66d06cd.jpg"
 
 AURORA_DISPACHER_PIC = ""
 
