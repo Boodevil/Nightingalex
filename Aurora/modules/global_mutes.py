@@ -13,7 +13,7 @@ from Aurora import dispatcher, OWNER_ID, DEV_USERS,DRAGONS,DEMONS, TIGERS,STRICT
 from Aurora.modules.helper_funcs.chat_status import user_admin, is_user_admin
 from Aurora.modules.helper_funcs.extraction import extract_user, extract_user_and_text
 from Aurora.modules.helper_funcs.filters import CustomFilters
-from TOGA.modules.sql.users_sql import get_all_chats
+from Aurora.modules.sql.users_sql import get_all_chats
 
 GMUTE_ENFORCE_GROUP = 6
 
