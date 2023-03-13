@@ -2,10 +2,10 @@ import importlib
 from typing import Union
 
 from future.utils import string_types
-from TOGA import dispatcher
-from TOGA.modules.helper_funcs.handlers import (CMD_STARTERS,
+from Aurora import dispatcher
+from Aurora.modules.helper_funcs.handlers import (CMD_STARTERS,
                                                         SpamChecker)
-from TOGA.modules.helper_funcs.misc import is_module_loaded
+from Aurora.modules.helper_funcs.misc import is_module_loaded
 from telegram import ParseMode, Update
 from telegram.ext import (CallbackContext, CommandHandler, Filters,
                           MessageHandler, RegexHandler)
@@ -15,9 +15,9 @@ FILENAME = __name__.rsplit(".", 1)[-1]
 
 if is_module_loaded(FILENAME):
 
-    from TOGA.modules.helper_funcs.chat_status import (
+    from Aurora.modules.helper_funcs.chat_status import (
         connection_status, is_user_admin, user_admin)
-    from TOGA.modules.sql import disable_sql as sql
+    from Aurora.modules.sql import disable_sql as sql
     from telegram.ext.dispatcher import run_async
 
     DISABLE_CMDS = []
