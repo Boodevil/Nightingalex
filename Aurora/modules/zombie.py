@@ -6,7 +6,7 @@ from telethon.errors import ChatAdminRequiredError, UserAdminInvalidError
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights, ChannelParticipantsAdmins
 
-from TOGA import telethn, OWNER_ID, DEV_USERS, DRAGONS, DEMONS
+from Aurora import telethn, OWNER_ID, DEV_USERS, DRAGONS, DEMONS
 
 BANNED_RIGHTS = ChatBannedRights(
     until_date=None,
@@ -95,7 +95,7 @@ async def rm_deletedacc(show):
     await memek.edit(del_status)
         
 from telethon.tl.types import UserStatusLastMonth, UserStatusLastWeek, ChatBannedRights
-from TOGA.events import register
+from Aurora.events import register
 from telethon import *
 from telethon.tl.functions.channels import (EditBannedRequest)
                                             
