@@ -6,18 +6,18 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, MessageHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
-import TOGA.modules.sql.blacklist_sql as sql
-from TOGA import dispatcher, LOGGER
-from TOGA.modules.disable import DisableAbleCommandHandler
-from TOGA.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from TOGA.modules.helper_funcs.extraction import extract_text
-from TOGA.modules.helper_funcs.misc import split_message
-from TOGA.modules.log_channel import loggable
-from TOGA.modules.warns import warn
-from TOGA.modules.helper_funcs.string_handling import extract_time
-from TOGA.modules.connection import connected
+import Aurora.modules.sql.blacklist_sql as sql
+from Aurora import dispatcher, LOGGER
+from Aurora.modules.disable import DisableAbleCommandHandler
+from Aurora.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from Aurora.modules.helper_funcs.extraction import extract_text
+from Aurora.modules.helper_funcs.misc import split_message
+from Aurora.modules.log_channel import loggable
+from Aurora.modules.warns import warn
+from Aurora.modules.helper_funcs.string_handling import extract_time
+from Aurora.modules.connection import connected
 
-from TOGA.modules.helper_funcs.alternate import send_message, typing_action
+from Aurora.modules.helper_funcs.alternate import send_message, typing_action
 
 BLACKLIST_GROUP = 11
 
