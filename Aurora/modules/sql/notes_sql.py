@@ -1,8 +1,8 @@
 # Note: chat_id's are stored as strings because the int is too large to be stored in a PSQL database.
 import threading
 
-from TOGA.modules.helper_funcs.msg_types import Types
-from TOGA.modules.sql import BASE, SESSION
+from Aurora.modules.helper_funcs.msg_types import Types
+from Aurora.modules.sql import BASE, SESSION
 from sqlalchemy import (Boolean, Column, Integer, String, UnicodeText, distinct,
                         func)
 
