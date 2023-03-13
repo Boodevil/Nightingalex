@@ -2,12 +2,12 @@ import random
 import threading
 from typing import Union
 
-from TOGA.modules.helper_funcs.msg_types import Types
-from TOGA.modules.sql import BASE, SESSION
+from Aurora.modules.helper_funcs.msg_types import Types
+from Aurora.modules.sql import BASE, SESSION
 from sqlalchemy import BigInteger, Boolean, Column, Integer, String, UnicodeText
 
-DEFAULT_WELCOME = "Hey {first}, how are you? 🐿️"
-DEFAULT_GOODBYE = "Cya! You won't be missed 🐿️."
+DEFAULT_WELCOME = "Hey {first}, how are you? 😌"
+DEFAULT_GOODBYE = "Imao! You won't be missed 😌."
 
 DEFAULT_WELCOME_MESSAGES = [
     "{first} is here!",  # Discord welcome messages copied
