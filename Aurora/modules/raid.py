@@ -11,7 +11,7 @@ from telegram.utils.helpers import mention_html
 from Aurora.modules.log_channel import loggable
 from Aurora.modules.helper_funcs.anonymous import user_admin, AdminPerms
 from Aurora.modules.helper_funcs.chat_status import bot_admin, connection_status, user_admin_no_reply
-from Aurora.modules.helper_funcs.decorators import TOGAcmd, TOGAcallback
+from Aurora.modules.helper_funcs.decorators import Auroracmd, Auroracallback
 from .. import LOGGER, updater
 
 import Aurora.modules.sql.welcome_sql as sql
