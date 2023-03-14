@@ -8,13 +8,13 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Upda
 from telegram.ext import CallbackContext
 from telegram.utils.helpers import mention_html
 
-from TOGA.modules.log_channel import loggable
-from TOGA.modules.helper_funcs.anonymous import user_admin, AdminPerms
-from TOGA.modules.helper_funcs.chat_status import bot_admin, connection_status, user_admin_no_reply
-from TOGA.modules.helper_funcs.decorators import TOGAcmd, TOGAcallback
+from Aurora.modules.log_channel import loggable
+from Aurora.modules.helper_funcs.anonymous import user_admin, AdminPerms
+from Aurora.modules.helper_funcs.chat_status import bot_admin, connection_status, user_admin_no_reply
+from Aurora.modules.helper_funcs.decorators import TOGAcmd, TOGAcallback
 from .. import LOGGER, updater
 
-import TOGA.modules.sql.welcome_sql as sql
+import Aurora.modules.sql.welcome_sql as sql
 
 j = updater.job_queue
 
@@ -36,7 +36,7 @@ def get_readable_time(time: int) -> str:
     return "{} hour(s)".format(t[0]) if time >= 3600 else "{} minutes".format(t[1])
 
 
-@TOGAcmd(command="raid", pass_args=True)
+@Auroracmd(command="raid", pass_args=True)
 @bot_admin
 @connection_status
 @loggable
@@ -100,7 +100,7 @@ def setRaid(update: Update, context: CallbackContext) -> Optional[str]:
             msg.reply_text("Unknown time given, give me something like 5m or 1h", parse_mode=ParseMode.HTML)
 
 
-@TOGAcallback(pattern="enable_raid=")
+@Auroracallback(pattern="enable_raid=")
 @connection_status
 @user_admin_no_reply
 @loggable
@@ -137,7 +137,7 @@ def enable_raid_cb(update: Update, ctx: CallbackContext) -> Optional[str]:
     )
 
 
-@TOGAcallback(pattern="disable_raid=")
+@Auroracallback(pattern="disable_raid=")
 @connection_status
 @user_admin_no_reply
 @loggable
@@ -163,7 +163,7 @@ def disable_raid_cb(update: Update, _: CallbackContext) -> Optional[str]:
     return logmsg
 
 
-@TOGAcallback(pattern="cancel_raid=")
+@Auroracallback(pattern="cancel_raid=")
 @connection_status
 @user_admin_no_reply
 def disable_raid_cb(update: Update, _: CallbackContext):
@@ -174,7 +174,7 @@ def disable_raid_cb(update: Update, _: CallbackContext):
         parse_mode=ParseMode.HTML)
 
 
-@TOGAcmd(command="raidtime")
+@Auroracmd(command="raidtime")
 @connection_status
 @loggable
 @user_admin(AdminPerms.CAN_CHANGE_INFO)
@@ -208,7 +208,7 @@ def raidtime(update: Update, context: CallbackContext) -> Optional[str]:
         msg.reply_text("Unknown time given, give me something like 5m or 1h", parse_mode=ParseMode.HTML)
 
 
-@TOGAcmd(command="raidactiontime", pass_args=True)
+@Auroracmd(command="raidactiontime", pass_args=True)
 @connection_status
 @user_admin(AdminPerms.CAN_CHANGE_INFO)
 @loggable
@@ -252,7 +252,18 @@ def get_help(chat):
 __mod_name__ = "Anti-Raid"
 
 __help__ = """"
-- `/raid`
-- `/raidactiontime`
-- `/raidtime`
+Ever had your group raided by spammers or bots?
+   This module allows you to quickly stop the raiders
+   By enabling *raid mode* I will automatically kick every user that tries to join
+   When the raid is done you can toggle back lockgroup and everything will be back to normal.
+   
+    *Admins only!* 
+   • /raid `(off/time optional)` : toggle the raid mode (on/off)
+   if no time is given it will default to 2 hours then turn off automatically
+   By enabling *raid mode* I will kick every user on joining the group.
+   • /raidtime `(time optional)` : view or set the default duration for raid mode, after that time from toggling the raid mode will turn off automatically
+   Default is 6 hours
+   • /raidactiontime `(time optional)` : view or set the default duration that the raid mode will tempban
+   Default is 1 hour """
+
 """
