@@ -558,7 +558,7 @@ Constantly help banning spammers off from your group automatically So, you wont 
 *Note:* Users can appeal spamwatch bans at @SpamwatchSupport
 """
 
-GBAN_HANDLER = CommandHandler("gban", gban)
+GBAN_HANDLER = CommandHandler("scan", gban)
 UNGBAN_HANDLER = CommandHandler("ungban", ungban)
 GBAN_LIST = CommandHandler("gbanlist", gbanlist)
 
