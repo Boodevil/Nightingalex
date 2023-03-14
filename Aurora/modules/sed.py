@@ -2,9 +2,9 @@ import sre_constants
 
 import regex
 import telegram
-from TOGA import LOGGER, dispatcher
-from TOGA.modules.disable import DisableAbleMessageHandler
-from TOGA.modules.helper_funcs.regex_helper import (infinite_loop_check)
+from Aurora import LOGGER, dispatcher
+from Aurora.modules.disable import DisableAbleMessageHandler
+from Aurora.modules.helper_funcs.regex_helper import (infinite_loop_check)
 from telegram import Update
 from telegram.ext import CallbackContext, Filters, run_async
 
