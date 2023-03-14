@@ -1,6 +1,6 @@
-from TOGA import *
-from TOGA import LOGGER
-from TOGA.events import register
+from Aurora import *
+from Aurora import LOGGER
+from Aurora.events import register
 from telethon.tl.types import ChannelParticipantAdmin
 from telethon.tl.types import ChannelParticipantCreator
 from telethon.tl.functions.channels import GetParticipantRequest
@@ -20,8 +20,8 @@ from telethon.tl import functions
 from telethon.tl import types
 from telethon.tl.types import *
 
-sudo = 5163444566
-BOT_ID = 5755888894
+sudo = 5989692316
+BOT_ID = 6086605947
 CMD_HELP = '/ !'
 
 async def is_register_admin(chat, user):
