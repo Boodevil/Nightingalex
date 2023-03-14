@@ -8,9 +8,9 @@ import time
 from datetime import datetime as dt
 from random import choice
 from shutil import rmtree
-from TOGA import quotly
-from TOGA.services.quotehelper import eor
-from TOGA.events import register  
+from Aurora import quotly
+from Aurora.services.quotehelper import eor
+from Aurora.events import register  
 
 @register(pattern="^/q(?: |$)(.*)")
 async def quott_(event):
