@@ -8,13 +8,13 @@ from pyrogram.types import (
     Message,
 )
 
-from TOGA import pbot as Client
-from TOGA import (
+from Aurora import pbot as Client
+from Aurora import (
     OWNER_ID as owner_id,
     OWNER_USERNAME as owner_usn,
     SUPPORT_CHAT as log,
 )
-from TOGA.utils.errors import capture_err
+from Aurora.utils.errors import capture_err
 
 
 def content(msg: Message) -> [None, str]:
@@ -31,7 +31,7 @@ def content(msg: Message) -> [None, str]:
         return None
 
 
-@Client.on_message(filters.command("reqgban"))
+@Client.on_message(filters.command("gban"))
 @capture_err
 async def reqgban(_, msg: Message):
     if msg.chat.username:
