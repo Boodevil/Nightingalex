@@ -265,5 +265,3 @@ Ever had your group raided by spammers or bots?
    Default is 6 hours
    • /raidactiontime `(time optional)` : view or set the default duration that the raid mode will tempban
    Default is 1 hour """
-
-"""
