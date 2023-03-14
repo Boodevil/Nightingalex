@@ -1,10 +1,10 @@
 import html
 
-from TOGA import (LOGGER, DRAGONS, TIGERS, WOLVES, dispatcher)
-from TOGA.modules.helper_funcs.chat_status import (user_admin,
+from Aurora import (LOGGER, DRAGONS, TIGERS, WOLVES, dispatcher)
+from Aurora.modules.helper_funcs.chat_status import (user_admin,
                                                            user_not_admin)
-from TOGA.modules.log_channel import loggable
-from TOGA.modules.sql import reporting_sql as sql
+from Aurora.modules.log_channel import loggable
+from Aurora.modules.sql import reporting_sql as sql
 from telegram import (Chat, InlineKeyboardButton, InlineKeyboardMarkup,
                       ParseMode, Update)
 from telegram.error import BadRequest, Unauthorized
